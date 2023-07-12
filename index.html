@@ -18,22 +18,37 @@
     <!-- header -->
     <header class="header">
         <div class="bg-primary">
-        <h1 class="p-2 text-center text-white">Weather Dashboard</h1>
+            <h1 class="p-2 text-center text-white">Weather Dashboard</h1>
         </div>
     </header>
 
     <!-- main content -->
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
-    
-          <div class="card">
-            <h3 class="card-header">Search for a City:</h3>
-            <!-- <form id="search-form" class="card-body"> -->
-              <input name="search" id="search" type="text" autofocus="true" class="form-input" />
-              <button class="btn">Search</button>
-            <!-- </form> -->
 
-      </main>
+            <!-- Search section -->
+            <section>
+                <div class="card">
+                    <h3 class="card-header">Search for a City:</h3>
+                    <section id="search-form" class="card-body">
+                        <input name="search" id="search" type="text" autofocus="true" class="form-input" />
+                        <button class="btn">Search</button>
+                    </section>
+            </section>
+
+            <!-- Current forecast section -->
+            <section>
+                <div class="card">
+                    <h1 class="searchInfo"></h1>
+                    <img class="weatherIcon">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <p class="wind"></p>
+                </div>
+            </section>
+
+
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
@@ -41,4 +56,5 @@
     <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>
