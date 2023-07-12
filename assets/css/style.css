@@ -15,4 +15,17 @@ h1 {
     font-weight: bold;
 }
 
+.weatherIcon {
+    width: 30%
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    width: 100vw !important;
+}
 
