@@ -11,7 +11,7 @@
 
 ## Description
 
-The purpose of this project is to build a weather dashboard that uses third-party server-side APIs to display today's weather forecast as well as the weather forecast for the next 5 days for each searched city. The application runs in the browser and features dynamically updated HTML and CSS.
+The purpose of this project is to build a weather dashboard that uses third-party server-side APIs to display today's weather forecast as well as the weather forecast for the next 5 days for each searched city. The application runs in the browser and features dynamically updated HTML, CSS, and JavaScript.
 
 
 ## Code Languages

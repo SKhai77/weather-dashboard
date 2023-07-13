@@ -1,12 +1,17 @@
+
+// Global variables
 // Search Section
 var cityInput = document.getElementById("search")
-var searchBtn = document.querySelector(".btn")
+var searchBtn = document.querySelector("#btn")
+var searchHistory = $("search-history")
+
 // Current forecast section
 var searchInfo = document.querySelector(".searchInfo")
 var weatherIcon = document.querySelector(".weatherIcon")
 var temp = document.querySelector(".temp")
 var humidity = document.querySelector(".humidity")
 var wind = document.querySelector(".wind")
+
 // Future forecast section
 var forecast = document.querySelectorAll(".forecast")
 
@@ -23,7 +28,7 @@ function fetchWeather(cityName) {
         return response.json()
     })
     .then(function(data) {
-        console.log(data)
+        
         // Data format
         var currentDate = new Date(data.list[0].dt * 1000)
         var month = currentDate.getMonth() + 1
@@ -36,8 +41,8 @@ function fetchWeather(cityName) {
         humidity.innerHTML = "Humidity: " + Math.floor(data.list[0].main.humidity) + "%";
         wind.innerHTML = "Wind: " + Math.floor(data.list[0].wind.speed) + "mph";
         for(var i = 0; i < forecast.length; i++) {
-            forecast[i].innerHTML = ""
-            const dayIndex = i * 8 + 4;
+            forecast[i].innerHTML = "";
+            var dayIndex = i * 8 + 4;
             var dayDate = new Date(data.list[dayIndex].dt * 1000)
             var forecastMonth =  dayDate.getMonth() + 1
             var forecastDay = dayDate.getDate()

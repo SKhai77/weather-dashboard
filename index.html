@@ -13,7 +13,7 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body class="flex-column min-100-vh">
+<body class="container-fluid">
 
     <!-- header -->
     <header class="header">
@@ -23,53 +23,67 @@
     </header>
 
     <!-- main content -->
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
+    <main>
+        <div class="row">
 
             <!-- Search section -->
-            <section>
+            <section class="col-sm-4">
                 <div class="card">
                     <h3 class="card-header">Search for a City:</h3>
                     <section id="search-form" class="card-body">
-                        <input name="search" id="search" type="text" autofocus="true" class="form-input" />
-                        <button class="btn">Search</button>
+                        <input id="search" type="text" autofocus="true" class="form-input"
+                            placeholder="Enter the name of a city" />
+                        <button id="btn" class="btn btn-primary btn-sm">Search</button>
+                    </section>
+
+
+                    <!-- Search history -->
+                    <section>
+                        <ul class="list-group" id="search-history-list">
+                            <!-- <li class="list-group-item"></li> -->
+
+                        </ul>
                     </section>
             </section>
 
-            <!-- Current forecast section -->
-            <section>
-                <div class="card">
+            <div class="col-sm-8">
+                <!-- Current forecast section -->
+                <section class="card">
                     <h1 class="searchInfo"></h1>
                     <img class="weatherIcon">
                     <p class="temp"></p>
                     <p class="humidity"></p>
                     <p class="wind"></p>
-                </div>
-            </section>
+                </section>
 
-            <!-- Future forecast section -->
-            <section>
-                <div class="flex">
-                    <div class="card">
-                        <div class="forecast"></div>
-                    </div>
-                    <div class="card">
-                        <div class="forecast"></div>
-                    </div>
-                    <div class="card">
-                        <div class="forecast"></div>
-                    </div>
-                    <div class="card">
-                        <div class="forecast"></div>
-                    </div>
-                    <div class="card">
-                        <div class="forecast"></div>
-                    </div>
-                </div>
-            </section>
 
+                <!-- Future forecast section -->
+                <section>
+                    <div class="row">
+                        <div class="col-sm card">
+                            <div class="forecast"></div>
+                        </div>
+                        <div class="col-sm card">
+                            <div class="forecast"></div>
+                        </div>
+                        <div class="col-sm card">
+                            <div class="forecast"></div>
+                        </div>
+                        <div class="col-sm card">
+                            <div class="forecast"></div>
+                        </div>
+                        <div class="col-sm card">
+                            <div class="forecast"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>

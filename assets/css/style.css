@@ -1,7 +1,16 @@
-/* the whole page */
+
+/*  Variable */
+:root {
+    --primary: #ccdad1;
+    --secondary: #9caea9;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #38302e;
+    --border-radius: 0.3rem;
+  }
+  
+  /* the whole page */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,6 +18,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
   }
 
 h1 {
@@ -16,16 +27,32 @@ h1 {
 }
 
 .weatherIcon {
-    width: 30%
+    width: 20%
 }
 
 .flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+
 }
 
-
+/* Cards */
 .card {
-    width: 100vw !important;
-}
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 2%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+
+#btn {
+    font-size: 1.3rem;
+    width: 100%;
+    margin: 5px 0;
+  }
 
