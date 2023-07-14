@@ -23,7 +23,7 @@ searchBtn.addEventListener("click", function() {
 
 // Main function to call weather api and pull data
 function fetchWeather(cityName) {
-    fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=ac9b7ed841a7d35e1e2d6566f6679201&units=imperial")
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=ac9b7ed841a7d35e1e2d6566f6679201&units=imperial")
     .then(function(response) {
         return response.json()
     })
@@ -35,7 +35,7 @@ function fetchWeather(cityName) {
         var day = currentDate.getDate()
         var year = currentDate.getFullYear()
         searchInfo.innerHTML = data.city.name + " - " + "(" + month + "/" + day + "/" + year + ")"
-        weatherIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png")
+        weatherIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png")
         weatherIcon.setAttribute("alt", data.list[0].weather[0].description)
         temp.innerHTML = "Temp: " +  Math.floor(data.list[0].main.temp) + "&#176F";
         humidity.innerHTML = "Humidity: " + Math.floor(data.list[0].main.humidity) + "%";
