@@ -18,7 +18,7 @@ The purpose of this project is to build a weather dashboard that uses third-part
 
 - HTML
 - CSS
-- JavaScript/ jQuery
+- JavaScript
 
 
 ## Installation
